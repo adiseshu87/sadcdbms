@@ -1,0 +1,44 @@
+
+
+SQL> desc university
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ REGID                                     NOT NULL NUMBER(5)
+ STUDENTNAME                                        CHAR(10)
+ GENDER                                             CHAR(6)
+ YEAR                                               NUMBER(4)
+ COLLEGENAME                                        CHAR(20)
+
+SQL> create table examhalltickets(htno number(10) primary key,stuname char(10),examcenter varchar(20),regid number(5) references university(regid));
+
+Table created.
+
+SQL> insert into examhalltickets(htno,stuname,examcenter,regid) values(&htno,'&stuname','&examcenter',&regid);
+Enter value for htno: 1234
+Enter value for stuname: ram
+Enter value for examcenter: adckkd
+Enter value for regid: 103
+old   1: insert into examhalltickets(htno,stuname,examcenter,regid) values(&htno,'&stuname','&examcenter',&regid)
+new   1: insert into examhalltickets(htno,stuname,examcenter,regid) values(1234,'ram','adckkd',103)
+
+1 row created.
+
+SQL> /
+Enter value for htno: 1235
+Enter value for stuname: raju
+Enter value for examcenter: adcpkl
+Enter value for regid: 102
+old   1: insert into examhalltickets(htno,stuname,examcenter,regid) values(&htno,'&stuname','&examcenter',&regid)
+new   1: insert into examhalltickets(htno,stuname,examcenter,regid) values(1235,'raju','adcpkl',102)
+
+1 row created.
+
+SQL> /
+Enter value for htno: 1236
+Enter value for stuname: sss
+Enter value for examcenter: sadc
+Enter value for regid: 101
+old   1: insert into examhalltickets(htno,stuname,examcenter,regid) values(&htno,'&stuname','&examcenter',&regid)
+new   1: insert into examhalltickets(htno,stuname,examcenter,regid) values(1236,'sss','sadc',101)
+
+1 row created.
