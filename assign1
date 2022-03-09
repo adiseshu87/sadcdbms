@@ -1,0 +1,61 @@
+SQL> create table university(regid number(5) primary key,studentname char(10),gender char(6),year number(4),collegename char(20));
+
+Table created.
+
+
+SQL> insert into university(regid,studentname,gender,year,collegename) values (&regid,'&studentname','&gender',&year,'&collegename');
+Enter value for regid: 101
+Enter value for studentname: ravi
+Enter value for gender: male
+Enter value for year: 3
+Enter value for collegename: adc
+old   1: insert into university(regid,studentname,gender,year,collegename) values (&regid,'&studentname','&gender',&year,'&collegename')
+new   1: insert into university(regid,studentname,gender,year,collegename) values (101,'ravi','male',3,'adc')
+
+1 row created.
+
+SQL> /
+Enter value for regid: 102
+Enter value for studentname: ram
+Enter value for gender: male
+Enter value for year: 2
+Enter value for collegename: adc
+old   1: insert into university(regid,studentname,gender,year,collegename) values (&regid,'&studentname','&gender',&year,'&collegename')
+new   1: insert into university(regid,studentname,gender,year,collegename) values (102,'ram','male',2,'adc')
+
+1 row created.
+
+SQL> 103
+SP2-0226: Invalid line number
+SQL> /
+Enter value for regid: 103
+Enter value for studentname: rani
+Enter value for gender: female
+Enter value for year: 2
+Enter value for collegename: sadc
+old   1: insert into university(regid,studentname,gender,year,collegename) values (&regid,'&studentname','&gender',&year,'&collegename')
+new   1: insert into university(regid,studentname,gender,year,collegename) values (103,'rani','female',2,'sadc')
+
+1 row created.
+
+SQL> /
+Enter value for regid: 104
+Enter value for studentname: srinu
+Enter value for gender: male
+Enter value for year: 1
+Enter value for collegename: sadc
+old   1: insert into university(regid,studentname,gender,year,collegename) values (&regid,'&studentname','&gender',&year,'&collegename')
+new   1: insert into university(regid,studentname,gender,year,collegename) values (104,'srinu','male',1,'sadc')
+
+1 row created.
+
+SQL> /
+Enter value for regid: 105
+Enter value for studentname: geetha
+Enter value for gender: female
+Enter value for year: 2
+Enter value for collegename: sadc
+old   1: insert into university(regid,studentname,gender,year,collegename) values (&regid,'&studentname','&gender',&year,'&collegename')
+new   1: insert into university(regid,studentname,gender,year,collegename) values (105,'geetha','female',2,'sadc')
+
+1 row created.
